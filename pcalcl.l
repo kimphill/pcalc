@@ -135,7 +135,7 @@ int     count(void);
                                 printf(" Decimal: [ %s ]\n", yytext);
                                 #endif
 
-                                yylval.val = (double) atoll(yytext);
+                                yylval.val = strtoull(yytext, NULL, 10);
 
                                 #ifdef RET_EACH
                                 return(NUMBER);
